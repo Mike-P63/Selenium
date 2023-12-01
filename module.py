@@ -31,11 +31,7 @@ class Site:
         self.driver.get(adress)
         time.sleep(testdata["sleep_time"])
 
-        # self.driver = webdriver.Chrome(service=service, options=options)
-        # self.driver.maximize_window()
-        # self.driver.get(adress)
-        # time.sleep(testdata["sleep_time"])
-
+        
     def find_element(self, mode, path):
         if mode == "css":
             element = self.driver.find_element(By.CSS_SELECTOR, path)
@@ -48,3 +44,6 @@ class Site:
     def get_element_property(self, mode, path, property):
         element = self.find_element(mode, path)
         return element.value_of_css_property(property)
+    
+    def close(self):
+        self.driver.close()
