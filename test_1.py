@@ -73,7 +73,6 @@ def test_add_post(log_xpath, pass_xpath, btn_selector, add_post_selector, add_ti
 
     time.sleep(testdata["sleep_time"])
 
-    
     code_label = site.find_element("xpath", check_title).text
     assert code_label == title_name, "test 'add post' Failed"
 
