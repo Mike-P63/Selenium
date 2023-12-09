@@ -42,7 +42,7 @@ class OperationsHelper(BasePage):
         self.find_element(TestSeacrhLocators.LOCATOR_LOGIN_BTN).click()
 
     def get_error_text(self):
-        logging.info(f"Start find error text")
+        logging.info("Start find error text")
         error_field = self.find_element(TestSeacrhLocators.LOCATOR_ERROR_FIELD, time=2)
         text = error_field.text
         logging.info(f"We find text '{text}' in error field {TestSeacrhLocators.LOCATOR_ERROR_FIELD[1]}")
